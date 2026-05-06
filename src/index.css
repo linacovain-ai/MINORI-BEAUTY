@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif", ui-serif, Georgia, serif;
+
+  --color-primary: #8f482c;
+  --color-primary-container: #ad6042;
+  --color-on-primary: #ffffff;
+  
+  --color-surface: #fbf9f7;
+  --color-on-surface: #1b1c1b;
+  --color-on-surface-variant: #54433d;
+  
+  --color-surface-container: #efedec;
+  --color-surface-container-high: #eae8e6;
+  --color-surface-container-highest: #e4e2e0;
+  --color-surface-container-low: #f5f3f1;
+  
+  --color-outline: #87736c;
+  --color-outline-variant: #d9c1b9;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased overflow-x-hidden;
+  }
+}
+
+/* Custom snap carousel utility */
+.snap-x {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.snap-x::-webkit-scrollbar {
+  display: none;
+}
+.snap-center {
+  scroll-snap-align: center;
+}
